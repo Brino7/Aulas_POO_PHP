@@ -7,25 +7,25 @@
  */
 class Caneta {
 
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampada;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampada;
     
-    function rabiscar(){
+    public function rabiscar(){
         if ($this->tampada == TRUE) {
             echo "<p>OPS! não posso rabiscar. :(</p>";
         }else{
-            echo "<p>OPA legal já posso rabiscar. :)</p>";
+            
             echo "<p>Estou rabiscando...</p>";
         }
         
     }
-    function tampar(){
+    public function tampar(){
         $this->tampada = true;
     }
-    function destampar(){
+    public function destampar(){
         $this->tampada = FALSE;
     }
 
